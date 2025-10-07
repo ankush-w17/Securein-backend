@@ -19,7 +19,7 @@ const seedDatabase = async () => {
     await Recipe.deleteMany({});
     console.log('Previous recipes cleared!');
 
-    const filePath = path.join(__dirname, '../../data/recipes.json');
+    const filePath = path.join(__dirname, '../../data/US_recipes_null.json');
     const recipesData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
     const cleanedRecipes = recipesData.map(recipe => ({
